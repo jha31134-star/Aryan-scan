@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Aryan_Scan - Chapter Reader</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Aryan<span>_Scan</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html">Manga</a>
+        <a href="index.html">Manhwa</a>
+    </nav>
+
+</header>
+
+
+<!-- CHAPTER READER -->
+
+<main class="reader">
+
+    <div class="reader-header">
+
+        <button onclick="goBack()">
+            ← Back
+        </button>
+
+        <div>
+            <p id="category">MANHWA</p>
+
+            <h1 id="bookTitle">
+                Loading...
+            </h1>
+
+            <h2>
+                Chapter 1
+            </h2>
+        </div>
+
+    </div>
+
+
+    <!-- CHAPTER CONTENT -->
+
+    <div class="chapter-content">
+
+        <div class="chapter-page">
+            <h2>Chapter 1</h2>
+
+            <p>
+                Welcome to the first chapter.
+            </p>
+
+            <p>
+                This is where your manga/manhwa
+                chapter pages will appear.
+            </p>
+
+            <p>
+                You can replace this section with
+                your own chapter images.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- CHAPTER NAVIGATION -->
+
+    <div class="chapter-navigation">
+
+        <button onclick="previousChapter()">
+            ← Previous
+        </button>
+
+        <button onclick="nextChapter()">
+            Next →
+        </button>
+
+    </div>
+
+</main>
+
+
+<script>
+
+    // GET BOOK NAME FROM URL
+
+    const params =
+        new URLSearchParams(window.location.search);
+
+    const book =
+        params.get("book");
+
+
+    // DISPLAY BOOK NAME
+
+    if (book) {
+
+        document.getElementById("bookTitle")
+            .textContent = book;
+
+        document.title =
+            "Aryan_Scan - " + book;
+
+    }
+
+
+    // BACK BUTTON
+
+    function goBack() {
+
+        window.location.href = "index.html";
+
+    }
+
+
+    // NEXT CHAPTER
+
+    function nextChapter() {
+
+        alert("Chapter 2 will be added soon!");
+
+    }
+
+
+    // PREVIOUS CHAPTER
+
+    function previousChapter() {
+
+        alert("You are already on Chapter 1.");
+
+    }
+
+</script>
+```
+
+</body>
+
+</html>
